@@ -1,0 +1,7 @@
+Host: https://rusvyatich.pro
+
+User-agent: Yandex
+Disallow: /home
+
+User-agent: *
+Disallow: /home

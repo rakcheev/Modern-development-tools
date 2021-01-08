@@ -1,0 +1,249 @@
+
+/*Css для магазина*/
+body {
+    overflow-x: hidden;
+}
+html,
+body,
+.container  {
+  height:100%;
+}
+main {
+  box-sizing: border-box;
+  min-height: 100%;
+  padding-bottom: 90px;
+}
+
+.takeByParameters input {
+	outline: none;
+    padding-left: 5px;
+    padding-right: 5px;
+    border: 1px solid #aea9a9;
+}
+.takeByParameters input:active, .takeByParameters input:hover, .takeByParameters input:focus {
+    outline: 0;
+    outline-offset: 0;
+}
+.takeByParameters input:active, .takeByParameters input:focus {
+    border: 1px solid black;
+}
+.takeByParameters {
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;    
+	max-width: 1200px;
+	margin: 0 auto;
+	position: relative;
+	height: 265px;
+	margin-bottom: 60px;
+}
+.addGradient {
+    width: 100%;
+    position: relative;
+}
+.takeByParameters::before,
+.addGradient::before {
+    /* Градиент */
+    background: #f2efef;
+    background: -moz-linear-gradient(left, #f2efef 0%, #999999 100%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%, #ffffff), color-stop(100%, #999999));
+    background: -webkit-linear-gradient(left, #f2efef 0%, #999999 100%);
+    background: -o-linear-gradient(left, #f2efef 0%, #999999 100%);
+    background: -ms-linear-gradient(left, #f2efef 0%, #999999 100%);
+    background: linear-gradient(to right, #f2efef 0%, #999999 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f2efef', endColorstr='#999999', GradientType=1);
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left:0px;
+    display: block;
+    /* Вместо толщины */
+    height: 1px;
+    width: 50%;
+}
+.takeByParameters::after,
+.addGradient::after {
+    /* Градиент */
+    background: #f2efef;
+    background: -moz-linear-gradient(right, #f2efef 0%, #999999 100%);
+    background: -webkit-gradient(linear, right top, left top, color-stop(0%, #ffffff), color-stop(100%, #999999));
+    background: -webkit-linear-gradient(right, #f2efef 0%, #999999 100%);
+    background: -o-linear-gradient(right, #f2efef 0%, #999999 100%);
+    background: -ms-linear-gradient(right, #f2efef 0%, #999999 100%);
+    background: linear-gradient(to left, #f2efef 0%, #999999 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f2efef', endColorstr='#999999', GradientType=1);
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left:50%;
+    display: block;
+    /* Вместо толщины */
+    height: 1px;
+    width: 50%;
+}
+.addGradient::before,
+.addGradient::after {
+    bottom: 30px;
+}
+.parameter {
+	text-align: justify;
+	width: 30%;
+	float: left;
+	margin-right: 5%;
+}
+.parameter input {
+	margin-left: 3px;
+}
+.parameter:last-child {
+	margin-right: 0;
+}
+.parameterCaption {
+	display: block;
+	text-align: center;
+	font-size: 24px;
+	font-weight: 400;
+	margin-bottom: 15px;
+}
+
+.parameterCaptionLevel2 {
+}
+.parameterCost input {
+	width: 60px;
+}
+.parameterSizes input {
+	width: 40px;
+}
+.parameterSizesName, 
+.parameterCostName {
+	width: 270px;
+	margin: 0 auto;
+	margin-top: 18px;
+    color: #757373;
+    text-align: justify;
+}
+.parameterCostName label {
+    cursor: pointer;
+}
+.Radio {
+	top: 4px;
+	left: -1px;
+	display: inline-block;
+}
+.shop .ui-slider {
+	width: 250px;
+}
+.shop .checkConditions {
+    top: 2px;
+    margin-right: 6px;
+    float: left;
+    width: 16px;
+    border: 2px solid #555555;
+    height: 16px;
+}
+ul {
+	margin: 0;
+	padding: 0;
+}
+.ui-slider {
+	margin-top: 7px;
+}
+.shopSteels {
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+	position: relative;
+	padding: 5px 0px;
+	margin-right: 15px;
+}
+.shopSteels input[type=checkbox]:checked +  .checkConditions::before {
+    top: 7px;
+    left: 2px;
+}
+.loadBlock {
+	display: none;
+	position: absolute;
+	top: -30px;
+	left: -500px;
+	content: "";
+	width: calc(100% + 1000px);
+	height: calc(100% + 50px);
+	background-color: rgba(163, 163, 163, 0.5);
+	z-index: 5;
+}
+.eraseSteel {
+	display: block;
+	margin-top: 10px;
+	padding: 7px 10px;
+}
+.circleBlock {
+	width: 90px;
+	height: 56px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -45px;
+	margin-top: -28px;
+}
+/* Шары */
+  div.circle {
+    border-radius: 50%;
+    background: #fff;
+    width: 13px;
+    height: 13px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center; 
+    margin-top: 40%;
+  }
+/* 1-ый шар */
+  div.circle:first-child {
+    animation: upload 0.4s cubic-bezier(0.39, 0.56, 0.57, 1) 0s infinite alternate-reverse;
+    background-color: #555555;
+    margin-right: 6px;
+  }
+/* 2-ой шар */
+  div.circle:nth-child(2) {
+    animation: upload 0.65s cubic-bezier(0.39, 0.56, 0.57, 1) 0s infinite alternate-reverse;
+    background-color: #555555;
+    margin-right: 3px;
+  }
+/* 3-ий шар */
+  div.circle:nth-child(3) {
+    animation: upload 0.55s cubic-bezier(0.39, 0.56, 0.57, 1) 0s infinite alternate-reverse;
+    background-color: #555555;
+    margin-left: 3px;
+  }
+/* 4-ый шар */
+  div.circle:last-child {
+    animation: upload 0.725s cubic-bezier(0.39, 0.56, 0.57, 1) 0s infinite alternate-reverse;
+    background-color: #555555;
+    margin-left: 6px;
+  }
+/*-- Анимация шаров --*/
+  @keyframes upload {
+    from { transform: translateY(55px); }
+    to { transform: translateY(-55px); }
+  }
+@media screen and (max-width: 965px) {
+	.parameter:last-child {
+		margin: 0 auto;
+	}
+	.parameter {
+		width: 400px;
+		margin: 0 auto;
+		margin-bottom: 30px;
+		float: none;
+	}
+	.eraseSteel {
+		margin: 0 auto;
+		margin-top: 10px;
+	}
+	.takeByParameters { 
+		height: auto;
+	}
+}
+@media screen and (max-width: 500px) {
+	.parameter {
+		width: 300px;
+	}
+}

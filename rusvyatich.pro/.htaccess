@@ -1,0 +1,36 @@
+# public_html/.htaccess
+
+<IfModule mod_rewrite.c>
+RewriteEngine on
+#RewriteCond %{HTTPS} off
+#RewriteCond %{HTTP:X-Forwarded-Proto} !https
+#RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+RewriteRule ^$ public/ [L]
+RewriteRule ((?s).*) public/$1 [L]
+Order Allow,Deny
+allow from all
+Deny from 95.188.19.0
+Deny from 82.208.89.197
+Deny from 95.161.174.202
+Deny from 178.140.100.176
+Deny from 1.173.82.199
+Deny from 31.173.82.199
+#allow from 83.97.110.31
+
+</IfModule>
+# One month for most static assets
+<filesMatch ".(css|jpg|jpeg|png|gif|ico|woff)$">
+Header set Cache-Control "max-age=604800, public"
+</filesMatch>
+<filesMatch ".(js)$">
+Header set Cache-Control "max-age=604800, public"
+</filesMatch>
+<filesMatch "main\\.js$">
+Header set Cache-Control "max-age=3600, public"
+</filesMatch>
+<filesMatch "admin\\.js$">
+Header set Cache-Control "max-age=3600, public"
+</filesMatch>
+<filesMatch "socketRatcher\\.js$">
+Header set Cache-Control "max-age=3600, public"
+</filesMatch>
